@@ -21,3 +21,9 @@ export const MainWrap = styled.div`
   background-color: beige;
   gap: 50px;
 `
+
+export const MainTitle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
