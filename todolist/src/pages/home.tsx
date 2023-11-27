@@ -1,23 +1,48 @@
 import * as St from "../components/mainbox";
-import { MainLayout } from "../layout/homeLayout";
-import { MainWrap } from "../layout/homeLayout";
+import { Children, useState } from "react";
+import styled from "@emotion/styled";
+import { MainLayout, MainWrap, MainTitle } from "../layout/homeLayout";
+import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import DailyBox from "../components/DailyBox";
 import TaskDailyBox from "../components/TaskDailyBox";
-import { MdArrowBackIos } from "react-icons/md";
-import { MdArrowForwardIos } from "react-icons/md";
-import { MainTitle } from "../layout/homeLayout";
+import dayjs from "dayjs";
+import TodoList from "../components/TodoList";
 
+const HoverWrap = styled.div`
+  cursor: pointer;
+    &:hover{
+      color: gray;
+    }
+`
 const Home = () => {
+  const [current, setCurrent] = useState(1);
+  const today = dayjs();
+  const mon = today.day(current).format("YY/MM/DD");
+  const sun = today.day(current+6).format("YY/MM/DD");
+
   return (
     <MainWrap>
-      <MdArrowBackIos size={50} />
+      <HoverWrap>
+        <MdArrowBackIos
+          size={50}
+          onClick={() => {
+            setCurrent(current - 7);
+          }}
+        />
+      </HoverWrap>
       <MainLayout>
-        <MainTitle>
-          <h1>Weekly TodoList</h1>
-          <h2>23/11/26 ~ 23/11/26</h2>
-        </MainTitle>
+        <div style={{ width: "100%" }}>
+          <h1 style={{ textAlign: "center" }}>Weekly TodoList</h1>
+          <MainTitle>
+            <h2 style={{ marginTop: "0px" }}>
+              {mon} ~ {sun}
+            </h2>
+          </MainTitle>
+        </div>
         <St.MainBox>
-          <DailyBox>월요일</DailyBox>
+          <DailyBox>월요일
+            <TodoList todos={[]}></TodoList>
+          </DailyBox>
           <DailyBox>화요일</DailyBox>
           <DailyBox>수요일</DailyBox>
           <DailyBox>목요일</DailyBox>
@@ -31,7 +56,16 @@ const Home = () => {
           <TaskDailyBox>금요일</TaskDailyBox>
         </St.TaskBox>
       </MainLayout>
-      <MdArrowForwardIos size={50} />
+      <HoverWrap>
+        <MdArrowForwardIos
+          size={50}
+          onClick={() => {
+            if (current < 1) {
+              setCurrent(current + 7);
+            }
+          }}
+        />
+      </HoverWrap>
     </MainWrap>
   );
 };

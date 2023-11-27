@@ -23,7 +23,8 @@ export const MainWrap = styled.div`
 `
 
 export const MainTitle = styled.div`
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 `

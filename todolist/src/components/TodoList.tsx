@@ -1,4 +1,4 @@
-import TodoItem from "./todoItem";
+import TodoItem from "./TodoItem";
 
 interface TodoListProps {
   todos: string[];
