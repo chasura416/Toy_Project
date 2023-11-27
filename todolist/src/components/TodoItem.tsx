@@ -15,6 +15,9 @@ const TodoItemContainer = styled.div< {todo: boolean} >`
 const CheckBox = styled.input`
   margin-right: 8px;
 `
+const TextBox = styled.input`
+  
+`
 
 const TodoItem = ({text}: TodoItemProps) => {
   const [todo, setTodo] = useState(false);
@@ -25,11 +28,15 @@ const TodoItem = ({text}: TodoItemProps) => {
 
   return (
     <TodoItemContainer>
+
       <CheckBox
         type="checkbox"
         checked={todo}
-        onChange={handleCheckBoxChange}
+        onChange={handleCheckBoxChange}/>
         <div>{text}</div>
+        <TextBox
+         type="text"
+         placeholder="내용 작성"/>
     </TodoItemContainer>
   )
 }
