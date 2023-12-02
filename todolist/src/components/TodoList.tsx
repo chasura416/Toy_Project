@@ -6,7 +6,7 @@ interface TodoListProps {
 
 const TodoList = ({todos}: TodoListProps) => {
   return (
-    <div>
+    <div style={{flex: '1 1 auto'}}>
       {todos.map((todo, index) => (
         <TodoItem key={index} text={todo} />
       ))}

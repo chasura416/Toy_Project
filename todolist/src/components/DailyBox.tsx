@@ -11,7 +11,7 @@ const DailyBox = ({children}: Dated) => {
   return (
     <St.DailyBox>
       {children}
-      <Line/>
+      {/* <Line/> */}
     </St.DailyBox>
   )
 }

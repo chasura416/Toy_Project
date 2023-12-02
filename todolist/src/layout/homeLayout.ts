@@ -3,8 +3,8 @@ import styled from "@emotion/styled";
 export const MainLayout = styled.div`
   max-width: 1440px;
   height: 100%;
-  background-color: blue;
-  color: red;
+  background-color: beige;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;

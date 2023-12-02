@@ -7,6 +7,8 @@ import DailyBox from "../components/DailyBox";
 import TaskDailyBox from "../components/TaskDailyBox";
 import dayjs from "dayjs";
 import TodoList from "../components/TodoList";
+import { Line } from "../components/line";
+import AddTodo from "../components/AddTodo";
 
 const HoverWrap = styled.div`
   cursor: pointer;
@@ -41,7 +43,9 @@ const Home = () => {
         </div>
         <St.MainBox>
           <DailyBox>월요일
-            <TodoList todos={[]}></TodoList>
+            <Line/>
+            <TodoList todos={["123"]}></TodoList>
+            <AddTodo/>
           </DailyBox>
           <DailyBox>화요일</DailyBox>
           <DailyBox>수요일</DailyBox>

@@ -27,7 +27,7 @@ const TodoItem = ({text}: TodoItemProps) => {
   };
 
   return (
-    <TodoItemContainer todo={false}>
+    <TodoItemContainer todo = {todo}>
       <CheckBox
         type="checkbox"
         checked={todo}
