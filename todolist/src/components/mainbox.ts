@@ -4,7 +4,7 @@ export const MainBox = styled.div`
   width: 1200px;
   height: 500px;
   border-radius: 15px;
-  background-color: yellow;
+  background-color: #d5bdaf;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@ export const TaskBox = styled.div`
   width: 1200px;
   height: 300px;
   border-radius: 15px;
-  background-color: yellow;
+  background-color: #d5bdaf;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@ export const DailyBox = styled.div`
   width: 200px;
   height: 400px;
   border-radius: 15px;
-  background-color: green;
+  background-color: #d6ccc2;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -40,7 +40,7 @@ export const TaskDailyBox = styled.div`
   width: 200px;
   height: 200px;
   border-radius: 15px;
-  background-color: green;
+  background-color: #d6ccc2;
   display: flex;
   justify-content: flex-start;
   align-items: center;
